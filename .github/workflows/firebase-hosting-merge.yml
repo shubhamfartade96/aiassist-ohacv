@@ -33,4 +33,4 @@ jobs:
           projectId: aiassist-ohacv
 env:
           FIREBASE_CLI_EXPERIMENTS: webframeworks
-DEBUG: firebase:*
+	  DEBUG: firebase:*
