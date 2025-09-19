@@ -1,10 +1,14 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'export',
+  trailingSlash: true,
+  images: {
+    unoptimized: true
+  },
+  // Remove server actions - they're not compatible with static exports
   experimental: {
-    serverActions: { allowedOrigins: ['localhost:3000'] },
-  },
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-};
-module.exports = nextConfig;
+    serverActions: false
+  }
+}
+
+module.exports = nextConfig
